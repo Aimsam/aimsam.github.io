@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="tensorflow," />
 
 
 
@@ -94,15 +94,23 @@
 
 
 
-<meta name="description" content="无聊记|祭无聊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="无聊记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="可能是最简单的Tensorflow入门教程（王者荣耀实例）前言本文写给想入门机器学习又苦于大学高数基本不会，高中数学基本忘光，就想入门中一窥的普通程序员们。能够帮助有工程经验的程序员（非算法工程师）快速上手TensorFlow。
+机器学习亦或是深度学习一直是大热话题，网上各式教程林林总总层出不穷。大多上来就讲CNN、RNN、gradient descent。概念太多，可能一个简单的求导就会你让的想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可能是最简单的Tensorflow入门教程（王者荣耀实例）">
+<meta property="og:url" content="http://yoursite.com/2017/12/05/tf1/index.html">
 <meta property="og:site_name" content="无聊记">
-<meta property="og:description" content="无聊记|祭无聊">
+<meta property="og:description" content="可能是最简单的Tensorflow入门教程（王者荣耀实例）前言本文写给想入门机器学习又苦于大学高数基本不会，高中数学基本忘光，就想入门中一窥的普通程序员们。能够帮助有工程经验的程序员（非算法工程师）快速上手TensorFlow。
+机器学习亦或是深度学习一直是大热话题，网上各式教程林林总总层出不穷。大多上来就讲CNN、RNN、gradient descent。概念太多，可能一个简单的求导就会你让的想">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/750c4fd8ly1fly7ff5kr5j20dw0bkjtf.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/750c4fd8ly1flz1c9upd4j21sz0u0qv6.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/750c4fd8ly1flz5f4ar19j20we0o8wfo.jpg">
+<meta property="og:updated_time" content="2017-12-05T08:05:12.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无聊记">
-<meta name="twitter:description" content="无聊记|祭无聊">
+<meta name="twitter:title" content="可能是最简单的Tensorflow入门教程（王者荣耀实例）">
+<meta name="twitter:description" content="可能是最简单的Tensorflow入门教程（王者荣耀实例）前言本文写给想入门机器学习又苦于大学高数基本不会，高中数学基本忘光，就想入门中一窥的普通程序员们。能够帮助有工程经验的程序员（非算法工程师）快速上手TensorFlow。
+机器学习亦或是深度学习一直是大热话题，网上各式教程林林总总层出不穷。大多上来就讲CNN、RNN、gradient descent。概念太多，可能一个简单的求导就会你让的想">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/750c4fd8ly1fly7ff5kr5j20dw0bkjtf.jpg">
 
 
 
@@ -130,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/05/tf1/"/>
 
 
 
 
 
-  <title>无聊记</title>
+  <title>可能是最简单的Tensorflow入门教程（王者荣耀实例） | 无聊记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -162,9 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,9 +263,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -285,9 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/05/tf1/" itemprop="url">可能是最简单的Tensorflow入门教程（王者荣耀实例）</a></h1>
+          <h1 class="post-title" itemprop="name headline">可能是最简单的Tensorflow入门教程（王者荣耀实例）</h1>
         
 
         <div class="post-meta">
@@ -302,6 +306,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/12/05/tf1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -324,9 +338,7 @@
       
 
       
-        
-          
-            <h1 id="可能是最简单的Tensorflow入门教程（王者荣耀实例）"><a href="#可能是最简单的Tensorflow入门教程（王者荣耀实例）" class="headerlink" title="可能是最简单的Tensorflow入门教程（王者荣耀实例）"></a>可能是最简单的Tensorflow入门教程（王者荣耀实例）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文写给想入门机器学习又苦于大学高数基本不会，高中数学基本忘光，就想入门中一窥的普通程序员们。能够帮助有工程经验的程序员（非算法工程师）快速上手TensorFlow。</p>
+        <h1 id="可能是最简单的Tensorflow入门教程（王者荣耀实例）"><a href="#可能是最简单的Tensorflow入门教程（王者荣耀实例）" class="headerlink" title="可能是最简单的Tensorflow入门教程（王者荣耀实例）"></a>可能是最简单的Tensorflow入门教程（王者荣耀实例）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文写给想入门机器学习又苦于大学高数基本不会，高中数学基本忘光，就想入门中一窥的普通程序员们。能够帮助有工程经验的程序员（非算法工程师）快速上手TensorFlow。</p>
 <p>机器学习亦或是深度学习一直是大热话题，网上各式教程林林总总层出不穷。大多上来就讲CNN、RNN、gradient descent。概念太多，可能一个简单的求导就会你让的想不起是怎么考上大学的。所以本文尽量少讲或者不讲知识点和理论零公式纯实战入门Tensorflow的hello world，所以很多地方只会给结论不会讲为什么。</p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
 <li>已经了解TensorFlow是一款Google的机器学习框架（<a href="https://www.tensorflow.org）" target="_blank" rel="external">https://www.tensorflow.org）</a></li>
@@ -361,144 +373,72 @@
 <p>如果有下期，我可能会尝试用Logistic Regression做一下王者荣耀中的英雄分类问题。</p>
 <p>下面是完整可以运行代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment"># Model parameters</span></div><div class="line">w = tf.Variable([<span class="number">1.0</span>], dtype=tf.float64)</div><div class="line">b = tf.Variable([<span class="number">0.0</span>], dtype=tf.float64)</div><div class="line"><span class="comment"># Model input and output</span></div><div class="line">x = tf.placeholder(tf.float64)</div><div class="line">y = tf.placeholder(tf.float64)</div><div class="line">linear_model = x * w + b</div><div class="line"><span class="comment"># training data</span></div><div class="line">atk_train = np.array(</div><div class="line">    [<span class="number">289.</span>, <span class="number">389.</span>, <span class="number">409.</span>, <span class="number">569.</span>, <span class="number">649.</span>, <span class="number">659.</span>, <span class="number">739.</span>, <span class="number">759.</span>, <span class="number">779.</span>, <span class="number">799.</span>, <span class="number">819.</span>, <span class="number">169.</span>, <span class="number">264.</span>, <span class="number">291.</span>, <span class="number">311.</span>,</div><div class="line">     <span class="number">324.</span>, <span class="number">331.</span>, <span class="number">344.</span>,</div><div class="line">     <span class="number">351.</span>, <span class="number">411.</span>, <span class="number">431.</span>, <span class="number">511.</span>, <span class="number">591.</span>, <span class="number">691.</span>, <span class="number">791.</span>, <span class="number">209.0</span>]).astype(np.float32) / <span class="number">100</span></div><div class="line">damage_train = np.array(</div><div class="line">    [<span class="number">175.</span>, <span class="number">236.</span>, <span class="number">247.</span>, <span class="number">348.</span>, <span class="number">395.</span>, <span class="number">397.</span>, <span class="number">446.</span>, <span class="number">460.</span>, <span class="number">470.</span>, <span class="number">486.</span>, <span class="number">499.</span>, <span class="number">102.</span>, <span class="number">160.</span>, <span class="number">175.</span>, <span class="number">189.</span>,</div><div class="line">     <span class="number">196.</span>, <span class="number">201.</span>, <span class="number">208.</span>, <span class="number">211.</span>,</div><div class="line">     <span class="number">250.</span>, <span class="number">260.</span>, <span class="number">310.</span>, <span class="number">358.</span>, <span class="number">420.</span>, <span class="number">480.</span>, <span class="number">126.0</span>]).astype(np.float32) / <span class="number">100</span></div><div class="line">atk_test = np.array([<span class="number">159.0</span>, <span class="number">169.0</span>, <span class="number">189.0</span>, <span class="number">891.</span>]).astype(np.float32) / <span class="number">100</span></div><div class="line">damage_test = np.array([<span class="number">96.0</span>, <span class="number">102.0</span>, <span class="number">114.0</span>, <span class="number">540.</span>]).astype(np.float32) / <span class="number">100</span></div><div class="line"><span class="comment"># loss function</span></div><div class="line">loss = tf.reduce_sum(tf.square(linear_model - y))</div><div class="line"><span class="comment"># optimizer</span></div><div class="line">optimizer = tf.train.GradientDescentOptimizer(<span class="number">0.001</span>)</div><div class="line">train = optimizer.minimize(loss)</div><div class="line"><span class="comment"># accuracy</span></div><div class="line">correct_prediction = tf.abs(tf.cast(linear_model, tf.int32) - tf.cast(y, tf.int32)) &lt; <span class="number">2</span></div><div class="line">accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</div><div class="line"><span class="comment"># training loop</span></div><div class="line">init = tf.global_variables_initializer()</div><div class="line">sess = tf.Session()</div><div class="line">sess.run(init)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100000</span>):</div><div class="line">    data = sess.run(train, &#123;x: atk_train, y: damage_train&#125;)</div><div class="line"><span class="comment"># evaluate training accuracy</span></div><div class="line">curr_w, curr_b, curr_loss, curr_accuracy = sess.run([w, b, loss, accuracy], &#123;x: atk_train, y: damage_train&#125;)</div><div class="line">print(<span class="string">"w: %s b: %s loss: %s accuracy: %s"</span> % (curr_w, curr_b, curr_loss, curr_accuracy))</div><div class="line"></div><div class="line">curr_w, curr_b, curr_loss, curr_accuracy = sess.run([w, b, loss, accuracy], &#123;x: atk_test, y: damage_test&#125;)</div><div class="line">print(<span class="string">"w: %s b: %s loss: %s accuracy: %s"</span> % (curr_w, curr_b, curr_loss, curr_accuracy))</div></pre></td></tr></table></figure></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aimsam">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="无聊记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/01/hello-world/" itemprop="url">hello-world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <p>换个方式重新开始</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/01/hello-world/" rel="next" title="hello-world">
+                <i class="fa fa-chevron-left"></i> hello-world
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -506,6 +446,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -525,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -599,6 +554,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可能是最简单的Tensorflow入门教程（王者荣耀实例）"><span class="nav-number">1.</span> <span class="nav-text">可能是最简单的Tensorflow入门教程（王者荣耀实例）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.3.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">1.4.</span> <span class="nav-text">后记</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -712,6 +683,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
